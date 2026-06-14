@@ -7,6 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<app-status></app-status>
 <h2>Product List</h2>
 
 <table>
@@ -31,15 +32,15 @@
 
 <h3>Add Product</h3>
 
-<input type="number" placeholder="ID" [(ngModel)]="newProduct.id" name="id">
-<input type="text" placeholder="Name" [(ngModel)]="newProduct.name" name="name">
-<input type="number" placeholder="Price" [(ngModel)]="newProduct.price" name="price">
-<input type="text" placeholder="Type" [(ngModel)]="newProduct.type" name="type">
+<input type="number" placeholder="ID" [(ngModel)]="product.id" name="id">
+<input type="text" placeholder="Name" [(ngModel)]="product.name" name="name">
+<input type="number" placeholder="Price" [(ngModel)]="product.price" name="price">
+<input type="text" placeholder="Type" [(ngModel)]="product.type" name="type">
 
 <button (click)="addProduct()">Add</button>
 
 <h4>Delete Product</h4>
-<input type="number" placeholder="Enter ProductId to Delete" name="id">
+<input type="number" placeholder="Enter ProductId to Delete" [(ngModel)]="pId" name="id">
 
 <button (click)="deleteProduct()">DeleteProduct</button>
 
